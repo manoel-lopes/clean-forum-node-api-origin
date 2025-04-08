@@ -35,11 +35,10 @@
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="20" style="vertical-align: middle; margin-right: 8px;"/> [PostgreSQL](https://www.postgresql.org/)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Redis](https://redis.io/)
 - <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" alt="Zod" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Zod](https://zod.dev/)
-- <img src="https://orm.drizzle.team/logo.svg" alt="Drizzle ORM" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Drizzle ORM](https://orm.drizzle.team/)
 - <img src="https://vitest.dev/logo.svg" alt="Vitest" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Vitest](https://vitest.dev/)
 - <img src="https://raw.githubusercontent.com/visionmedia/supertest/main/logo.svg" alt="Supertest" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Supertest](https://github.com/visionmedia/supertest)
-- <img src="https://typicode.github.io/husky/logo.svg" alt="Husky" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Husky](https://typicode.github.io/husky/)
-- <img src="https://www.vectorlogo.zone/logos/prismaio/prismaio-icon.svg" alt="Prisma" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Prisma](https://www.prisma.io/)
+- [Husky](https://typicode.github.io/husky/)
+- [Prisma](https://www.prisma.io/)
 
 
 ## 🛠️ Design Patterns
