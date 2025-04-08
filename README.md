@@ -29,16 +29,16 @@
 
 ## ✨ Technologies
 
-- ![Fastify](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg) [Fastify](https://fastify.io/)
-- ![TypeScript](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg) [TypeScript](https://www.typescriptlang.org/)
-- ![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg) [Docker](https://www.docker.com/)
-- ![PostgreSQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg) [PostgreSQL](https://www.postgresql.org/)
-- ![Redis](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg) [Redis](https://redis.io/)
-- ![Zod](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zod/zod-original.svg) [Zod](https://zod.dev/)
-- ![Drizzle ORM](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drizzle-orm/drizzle-orm-original.svg) [Drizzle ORM](https://orm.drizzle.team/)
-- ![Vitest](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg) [Vitest](https://vitest.dev/)
-- ![Supertest](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supertest/supertest-original.svg) [Supertest](https://github.com/visionmedia/supertest)
-- ![Husky](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/husky/husky-original.svg) [Husky](https://typicode.github.io/husky/)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg" alt="Fastify" height="20"/> [Fastify](https://fastify.io/)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" height="20"/> [TypeScript](https://www.typescriptlang.org/)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" height="20"/> [Docker](https://www.docker.com/)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="20"/> [PostgreSQL](https://www.postgresql.org/)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" height="20"/> [Redis](https://redis.io/)
+- <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" alt="Zod" height="20"/> [Zod](https://zod.dev/)
+- <img src="https://avatars.githubusercontent.com/u/116302963?s=200&v=4" alt="Drizzle ORM" height="20"/> [Drizzle ORM](https://orm.drizzle.team/)
+- <img src="https://vitest.dev/logo.svg" alt="Vitest" height="20"/> [Vitest](https://vitest.dev/)
+- <img src="https://avatars.githubusercontent.com/u/19800093?s=200&v=4" alt="Supertest" height="20"/> [Supertest](https://github.com/visionmedia/supertest)
+- <img src="https://camo.githubusercontent.com/671b4081cb49354be80e1fdfc034d6eb9f4084c7718286fd888b61749c4fbc7b/68747470733a2f2f6875736b792e696d672f6875736b792d6c6f676f2e737667" alt="Husky" height="20"/> [Husky](https://typicode.github.io/husky/)
 
 
 
