@@ -36,7 +36,7 @@
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Redis](https://redis.io/)
 - <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" alt="Zod" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Zod](https://zod.dev/)
 - <img src="https://vitest.dev/logo.svg" alt="Vitest" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Vitest](https://vitest.dev/)
-- <img src="https://raw.githubusercontent.com/visionmedia/supertest/main/logo.svg" alt="Supertest" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Supertest](https://github.com/visionmedia/supertest)
+- [Supertest](https://github.com/visionmedia/supertest)
 - [Husky](https://typicode.github.io/husky/)
 - [Prisma](https://www.prisma.io/)
 
