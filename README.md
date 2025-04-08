@@ -29,7 +29,7 @@
 
 ## ✨ Technologies
 
-- <img src="https://www.vectorlogo.zone/logos/fastifyio/fastifyio-icon.svg" alt="Fastify" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Fastify](https://fastify.io/)
+- [Fastify](https://fastify.io/)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" height="20" style="vertical-align: middle; margin-right: 8px;"/> [TypeScript](https://www.typescriptlang.org/)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" height="20" style="vertical-align: middle; margin-right: 8px;"/> [Docker](https://www.docker.com/)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="20" style="vertical-align: middle; margin-right: 8px;"/> [PostgreSQL](https://www.postgresql.org/)
