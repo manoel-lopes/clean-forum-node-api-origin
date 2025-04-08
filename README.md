@@ -4,28 +4,14 @@
 
 - Users can create questions and answers.
 - Questions can be edited, commented on, or marked as solved.
-- Answers can be upvoted and selected as the best answer.
+- Answers can be choose as the best answer for an question.
 - Only the author can edit or delete their content.
-- Votes and best answers influence user reputation (not yet implemented).
 
 ## ⚙️ Functional Requirements
 
-- User registration and authentication.
-- Create, edit, and delete questions and answers.
-- List questions by recent, popular, and unanswered.
-- Search for questions by keywords.
-- Comment on questions and answers.
-- Vote on answers.
-- Select a best answer.
-
 ## 🔒 Non-Functional Requirements
 
-- Codebase using Clean Architecture and DDD principles.
-- Unit and integration tests.
-- RESTful API using Fastify.
 - Environment configuration through `.env`.
-- Database migrations.
-- Dockerized services for development.
 
 ## ✨ Technologies
 
