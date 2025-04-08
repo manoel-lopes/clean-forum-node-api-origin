@@ -5,18 +5,12 @@ import { BaseInMemoryRepository as BaseRepository } from './base/base-in-memory.
 export class InMemoryQuestionsRepository
   extends BaseRepository<Question>
   implements QuestionsRepository {
-
-  async findById (questionId: string): Promise<Question | null> {
-    const question = await this.findOneBy('id', questionId)
-    return question
-  }
-
-  async findByTitle (title: string): Promise<Question | null> {
-    const question = await this.findOneBy('title', title)
-    return question
-  }
-
   async delete (questionId: string): Promise<void> {
     await this.deleteOneBy('id', questionId)
+  }
+
+  async findByTitle (questionTitle: string): Promise<Question | null> {
+    const question = await this.findOneBy('title', questionTitle)
+    return question
   }
 }

@@ -7,6 +7,10 @@ export abstract class BaseInMemoryRepository<Item extends Entity> {
     this.items.push(item)
   }
 
+  async findById (id: string): Promise<Item | null> {
+    return this.findOneBy('id', id)
+  }
+
   protected async findOneBy<Value>(key: keyof Item, value: Value): Promise<Item | null> {
     return this.items.find((item) => item[key] === value) || null
   }

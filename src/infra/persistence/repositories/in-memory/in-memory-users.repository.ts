@@ -7,9 +7,4 @@ export class InMemoryUsersRepository extends BaseRepository<User> implements Use
     const user = await this.findOneBy('email', email)
     return user
   }
-
-  async findById (id: string): Promise<User | null> {
-    const user = await this.findOneBy('id', id)
-    return user
-  }
 }
