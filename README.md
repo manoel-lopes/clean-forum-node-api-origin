@@ -29,16 +29,18 @@
 
 ## ✨ Technologies
 
-- <img src="https://www.vectorlogo.zone/logos/fastifyio/fastifyio-icon.svg" alt="Fastify" height="20" style="vertical-align:middle;"/> [Fastify](https://fastify.io/)
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" height="20" style="vertical-align:middle;"/> [TypeScript](https://www.typescriptlang.org/)
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" height="20" style="vertical-align:middle;"/> [Docker](https://www.docker.com/)
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="20" style="vertical-align:middle;"/> [PostgreSQL](https://www.postgresql.org/)
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" height="20" style="vertical-align:middle;"/> [Redis](https://redis.io/)
-- <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" alt="Zod" height="20" style="vertical-align:middle;"/> [Zod](https://zod.dev/)
-- <img src="https://orm.drizzle.team/logo.svg" alt="Drizzle ORM" height="20" style="vertical-align:middle;"/> [Drizzle ORM](https://orm.drizzle.team/)
-- <img src="https://vitest.dev/logo.svg" alt="Vitest" height="20" style="vertical-align:middle;"/> [Vitest](https://vitest.dev/)
-- <img src="https://camo.githubusercontent.com/671b4081cb49354be80e1fdfc034d6eb9f4084c7718286fd888b61749c4fbc7b/68747470733a2f2f6875736b792e696d672f6875736b792d6c6f676f2e737667" alt="Husky" height="20" style="vertical-align:middle;"/> [Husky](https://typicode.github.io/husky/)
-- <img src="https://www.vectorlogo.zone/logos/prismaio/prismaio-icon.svg" alt="Prisma" height="20" style="vertical-align:middle;"/> [Prisma](https://www.prisma.io/)
+| Technology      | Description |
+|----------------|-------------|
+| <img src="https://www.vectorlogo.zone/logos/fastifyio/fastifyio-icon.svg" height="20"/> | [Fastify](https://fastify.io/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="20"/> | [TypeScript](https://www.typescriptlang.org/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="20"/> | [Docker](https://www.docker.com/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="20"/> | [PostgreSQL](https://www.postgresql.org/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" height="20"/> | [Redis](https://redis.io/) |
+| <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" height="20"/> | [Zod](https://zod.dev/) |
+| <img src="https://orm.drizzle.team/logo.svg" height="20"/> | [Drizzle ORM](https://orm.drizzle.team/) |
+| <img src="https://vitest.dev/logo.svg" height="20"/> | [Vitest](https://vitest.dev/) |
+| <img src="https://raw.githubusercontent.com/visionmedia/supertest/main/logo.svg" height="20"/> | [Supertest](https://github.com/visionmedia/supertest) |
+| <img src="https://typicode.github.io/husky/logo.svg" height="20"/> | [Husky](https://typicode.github.io/husky/) |
 
 
 ## 🛠️ Design Patterns
