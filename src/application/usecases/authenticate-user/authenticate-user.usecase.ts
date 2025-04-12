@@ -13,14 +13,12 @@ export type AuthenticateUserRequest = {
 export type AuthenticateUserResponse = Omit<User, 'password'>
 
 export class AuthenticateUserUseCase implements UseCase {
-  constructor(
+  constructor (
     private readonly usersRepository: UsersRepository,
-    private readonly passwordHasher: PasswordHasher,
+    private readonly passwordHasher: PasswordHasher
   ) {}
 
-  async execute(
-    req: AuthenticateUserRequest,
-  ): Promise<AuthenticateUserResponse> {
+  async execute (req: AuthenticateUserRequest): Promise<AuthenticateUserResponse> {
     const { email, password } = req
     const user = await this.usersRepository.findByEmail(email)
     if (!user) {
@@ -29,17 +27,17 @@ export class AuthenticateUserUseCase implements UseCase {
 
     const doesPasswordMatch = await this.passwordHasher.compare(
       password,
-      user.password,
+      user.password
     )
     if (!doesPasswordMatch) {
       throw new InvalidPasswordError()
     }
-    
+
     return {
-       id: user.id,
-        name: user.name,
-         email: user.email,
-          createdAt: user.createdAt
-         }
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      createdAt: user.createdAt
+    }
   }
 }

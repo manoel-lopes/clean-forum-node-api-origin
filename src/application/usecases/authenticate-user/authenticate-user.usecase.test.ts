@@ -16,7 +16,7 @@ const fakePasswordHasher = {
     password === hashedPassword,
 }
 
-function makeSut(): Sut {
+function makeSut (): Sut {
   const usersRepository = new InMemoryUsersRepository()
   const sut = new AuthenticateUserUseCase(usersRepository, fakePasswordHasher)
   return { sut, usersRepository }
