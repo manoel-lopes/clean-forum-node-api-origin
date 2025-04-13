@@ -1,4 +1,4 @@
-type Resource = 'User'
+type Resource = 'User' | 'Question'
 
 export class ResourceNotFoundError extends Error {
   constructor (resource: Resource) {

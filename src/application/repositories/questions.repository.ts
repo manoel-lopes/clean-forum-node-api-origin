@@ -4,4 +4,5 @@ export type QuestionsRepository = {
   save(question: Question): Promise<void>
   findById(questionId: string): Promise<Question | null>
   findByTitle(title: string): Promise<Question | null>
+  delete(questionId: string): Promise<void>
 }
