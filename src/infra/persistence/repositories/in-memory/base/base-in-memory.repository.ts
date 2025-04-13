@@ -11,6 +11,10 @@ export abstract class BaseInMemoryRepository<Item extends Entity> {
     return this.findOneBy('id', id)
   }
 
+  async delete (id: string): Promise<void> {
+    await this.deleteOneBy('id', id)
+  }
+
   protected async findOneBy<Value>(key: keyof Item, value: Value): Promise<Item | null> {
     return this.items.find((item) => item[key] === value) || null
   }

@@ -1,4 +1,4 @@
-type Resource = 'question'
+type Resource = 'question' | 'answer'
 
 export class NotAuthorError extends Error {
   constructor (resource: Resource) {
