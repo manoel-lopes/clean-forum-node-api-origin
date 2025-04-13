@@ -10,4 +10,9 @@ export class InMemoryQuestionsRepository
     const question = await this.findOneBy('title', questionTitle)
     return question
   }
+
+  async findBySlug (slug: string): Promise<Question | null> {
+    const question = await this.findOneBy('slug', slug)
+    return question
+  }
 }
