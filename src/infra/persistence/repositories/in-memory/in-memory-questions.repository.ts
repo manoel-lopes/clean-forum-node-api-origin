@@ -5,7 +5,6 @@ import { BaseInMemoryRepository as BaseRepository } from './base/base-in-memory.
 export class InMemoryQuestionsRepository
   extends BaseRepository<Question>
   implements QuestionsRepository {
-
   async findByTitle (questionTitle: string): Promise<Question | null> {
     const question = await this.findOneBy('title', questionTitle)
     return question
