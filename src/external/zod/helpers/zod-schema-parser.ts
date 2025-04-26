@@ -30,12 +30,13 @@ export abstract class ZodSchemaParser {
   }
 
   private static detectContext (data: unknown) {
+    const contexts = [
+      { check: ZodSchemaParser.isParamsStructure, context: 'params' },
+      { check: ZodSchemaParser.isQueryStructure, context: 'query' },
+      { check: ZodSchemaParser.isBodyStructure, context: 'body' }
+    ]
     if (data && typeof data === 'object') {
-      return [
-        { check: ZodSchemaParser.isParamsStructure, context: 'params' },
-        { check: ZodSchemaParser.isQueryStructure, context: 'query' },
-        { check: ZodSchemaParser.isBodyStructure, context: 'body' }
-      ].find(({ check }) => check(data))?.context
+      return contexts.find(({ check }) => check(data))?.context
     }
   }
 
