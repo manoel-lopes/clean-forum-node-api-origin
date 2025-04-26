@@ -5,13 +5,11 @@ import { SchemaValidationError } from '@/infra/validation/errors/schema-validati
 export abstract class ZodSchemaParser {
   static parse<T = SchemaParseResult>(schema: z.Schema, data: unknown): T {
     const result = schema.safeParse(data)
-    if (!result.success) {
-      const issue = result.error.issues[0]
-      const paramLabel = ZodSchemaParser.labelParam(issue.path, data)
-      const message = ZodSchemaParser.formatCustomMessage(issue.message.toLowerCase(), paramLabel)
-      throw new SchemaValidationError(message)
-    }
-    return result.data
+    if (result.success) return result.data
+    const issue = result.error.issues[0]
+    const paramLabel = ZodSchemaParser.labelParam(issue.path, data)
+    const message = ZodSchemaParser.formatCustomMessage(issue.message.toLowerCase(), paramLabel)
+    throw new SchemaValidationError(message)
   }
 
   private static labelParam (path: (string | number)[], data: unknown): string {
