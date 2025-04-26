@@ -32,12 +32,12 @@ export abstract class ZodSchemaParser {
       const labels: Record<string, string> = {
         params: `route param '${field}'`,
         query: `query param '${field}'`,
-        body: `body param '${field}'`
+        body: `${field}`
       }
       return labels[context]
     }
 
-    return `'${field}'`
+    return `${field}`
   }
 
   private static detectContext (data: unknown): 'params' | 'query' | 'body' | undefined {
