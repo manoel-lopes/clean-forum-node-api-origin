@@ -2,69 +2,73 @@ import { z } from 'zod'
 import type { SchemaParseResult } from '@/infra/validation/ports/schema-parse-result'
 import { SchemaValidationError } from '@/infra/validation/errors/schema-validation.error'
 
-type URLParam = 'param' | 'query'
-type URLParamType = 'route param' | 'query param'
-type URLParamTypeReplacements = Record<URLParam, URLParamType>
-
 export abstract class ZodSchemaParser {
   static parse<T = SchemaParseResult>(schema: z.Schema, data: unknown): T {
-    const parsedSchema = schema.safeParse(data)
-    if (!parsedSchema.success) {
-      const error = ZodSchemaParser.formatErrorMessage(parsedSchema.error.errors[0])
-      throw new SchemaValidationError(error)
+    const result = schema.safeParse(data)
+    if (!result.success) {
+      const issue = result.error.issues[0]
+      const paramLabel = ZodSchemaParser.labelParam(issue.path as (string | number)[], data)
+      const message = ZodSchemaParser.formatCustomMessage(issue.message.toLowerCase(), paramLabel)
+      throw new SchemaValidationError(message)
     }
-    return parsedSchema.data
+    return result.data
   }
 
-  private static formatErrorMessage (issue: z.ZodIssue) {
-    const paramPath = issue.path.join(' ')
-    const param = ZodSchemaParser.normalizeURLParam(paramPath)
-    if (!param) {
-      return 'Request body is missing or empty'
-    }
-
-    const message = ZodSchemaParser.normalizeErrorMessage(issue.message.toLowerCase(), param)
-    return ZodSchemaParser.formatCharacterMessage(message)
-  }
-
-  private static normalizeURLParam (param: string): string {
-    const replacements: URLParamTypeReplacements = {
-      param: 'route param',
-      query: 'query param',
-    }
-
-    let formattedParam = param
-    const patterns: { [key: string]: string } = {
-      '^params ': 'route param \'',
-      '^query ': 'query param \'',
-    }
-
-    for (const [pattern, replacement] of Object.entries(patterns)) {
-      const regex = new RegExp(pattern)
-      if (regex.test(formattedParam)) {
-        formattedParam = formattedParam.replace(regex, replacement) + '\''
-        break
+  private static labelParam (path: (string | number)[], data: unknown): string {
+    if (path.length >= 2) {
+      const [context, field] = path
+      const labels: Record<string, string> = {
+        params: `route param '${field}'`,
+        query: `query param '${field}'`,
+      }
+      if (typeof context === 'string' && labels[context]) {
+        return labels[context]
       }
     }
 
-    const trimmedParam = formattedParam.trim() as URLParam
-    return replacements[trimmedParam] || formattedParam
-  }
-
-  private static normalizeErrorMessage (message: string, param: string) {
-    const formattedMessage = message
-    if (formattedMessage.includes('invalid')) {
-      return `Invalid ${param}`
+    const context = ZodSchemaParser.detectContext(data)
+    const field = path[path.length - 1]
+    if (context) {
+      const labels: Record<string, string> = {
+        params: `route param '${field}'`,
+        query: `query param '${field}'`,
+        body: `body param '${field}'`
+      }
+      return labels[context]
     }
 
-    return formattedMessage.includes('required')
-      ? `The ${param} is required`
-      : `The ${param} ${formattedMessage}`
+    return `'${field}'`
   }
 
-  private static formatCharacterMessage (message: string): string {
-    return message.replace(/(\d+)\scharacter\(s\)/g, (_, num) => {
-      return `${num} character${num > 1 ? 's' : ''}`
+  private static detectContext (data: unknown): 'params' | 'query' | 'body' | undefined {
+    if (typeof data !== 'object' || data === null) return undefined
+    if (ZodSchemaParser.isParamsStructure(data)) return 'params'
+    if (ZodSchemaParser.isQueryStructure(data)) return 'query'
+    if (ZodSchemaParser.isBodyStructure(data)) return 'body'
+    return undefined
+  }
+
+  private static isParamsStructure (data: object): boolean {
+    return Object.values(data).every(value => typeof value === 'string')
+  }
+
+  private static isQueryStructure (data: object): boolean {
+    return Object.values(data).every(value => typeof value === 'string' || typeof value === 'number')
+  }
+
+  private static isBodyStructure (data: object): boolean {
+    return Object.values(data).some(value => {
+      return typeof value === 'string' || typeof value === 'number' || typeof value === 'object'
     })
+  }
+
+  private static formatCustomMessage (message: string, paramLabel: string): string {
+    const patterns: { keyword: string; format: (param: string) => string }[] = [
+      { keyword: 'required', format: (param) => `The ${param} is required` },
+      { keyword: 'invalid', format: (param) => `Invalid ${param}` },
+    ]
+
+    const pattern = patterns.find(({ keyword }) => message.includes(keyword))
+    return pattern ? pattern.format(paramLabel) : `The ${paramLabel} ${message}`
   }
 }
